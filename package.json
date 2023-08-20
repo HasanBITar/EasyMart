@@ -1,0 +1,48 @@
+{
+  "name": "store",
+  "version": "1.0.0",
+  "scripts": {
+    "listen": "stripe listen --forward-to localhost:3000/api/webhook",
+    "prisma-push": "dotenv -e .env.local -- npx prisma db push",
+    "prisma-studio": "dotenv -e .env.local -- npx prisma studio",
+    "prisma-gen": "dotenv -e .env.local -- npx prisma generate",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.17",
+    "@prisma/client": "^4.16.2",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@stripe/stripe-js": "^1.52.1",
+    "@tailwindcss/line-clamp": "^0.2.0",
+    "axios": "^1.4.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "micro": "^10.0.1",
+    "moment": "^2.29.4",
+    "next": "latest",
+    "next-auth": "^4.22.1",
+    "react": "^18.2.0",
+    "react-currency-format": "^1.1.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-responsive-carousel": "^3.2.23",
+    "stripe": "^12.5.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "check-peer-dependencies": "^4.2.0",
+    "postcss": "^8.2.15",
+    "postcss-import": "^15.1.0",
+    "prisma": "^4.14.1",
+    "tailwindcss": "^2.1.2"
+  },
+  "overrides": {
+    "react-currency-format": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
+  }
+}
